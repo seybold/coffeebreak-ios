@@ -15,6 +15,7 @@
 		88824FA519F9A691000CD1EB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88824FA419F9A691000CD1EB /* Foundation.framework */; };
 		88824FA719F9A69A000CD1EB /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 88824FA619F9A69A000CD1EB /* libicucore.dylib */; };
 		88824FAC19FA2B27000CD1EB /* tagField.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 88824FAB19FA2B27000CD1EB /* tagField.tiff */; };
+		88824FAE19FA3391000CD1EB /* coffee16w.png in Resources */ = {isa = PBXBuildFile; fileRef = 88824FAD19FA3391000CD1EB /* coffee16w.png */; };
 		88BB7F6519F99BEF00502483 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 88BB7F6419F99BEF00502483 /* main.m */; };
 		88BB7F6819F99BEF00502483 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 88BB7F6719F99BEF00502483 /* AppDelegate.m */; };
 		88BB7F6B19F99BEF00502483 /* CoffeeBreak.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 88BB7F6919F99BEF00502483 /* CoffeeBreak.xcdatamodeld */; };
@@ -48,6 +49,7 @@
 		88824FA419F9A691000CD1EB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		88824FA619F9A69A000CD1EB /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 		88824FAB19FA2B27000CD1EB /* tagField.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = tagField.tiff; sourceTree = "<group>"; };
+		88824FAD19FA3391000CD1EB /* coffee16w.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coffee16w.png; sourceTree = "<group>"; };
 		88BB7F5F19F99BEF00502483 /* CoffeeBreak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeBreak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88BB7F6319F99BEF00502483 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88BB7F6419F99BEF00502483 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 		88BB7F6219F99BEF00502483 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				88824FAD19FA3391000CD1EB /* coffee16w.png */,
 				88824FAB19FA2B27000CD1EB /* tagField.tiff */,
 				88BB7F6319F99BEF00502483 /* Info.plist */,
 				88BB7F6419F99BEF00502483 /* main.m */,
@@ -255,6 +258,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				88BB7F7119F99BEF00502483 /* Main.storyboard in Resources */,
+				88824FAE19FA3391000CD1EB /* coffee16w.png in Resources */,
 				88BB7F7619F99BEF00502483 /* LaunchScreen.xib in Resources */,
 				88824FAC19FA2B27000CD1EB /* tagField.tiff in Resources */,
 				88BB7F7319F99BEF00502483 /* Images.xcassets in Resources */,
