@@ -36,7 +36,7 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
     UINavigationController *navController = [segue destinationViewController];
-    BreakRoomViewController *breakRoom = navController.visibleViewController;
+    BreakRoomViewController *breakRoom = (BreakRoomViewController *)navController.visibleViewController;
     breakRoom.roomName = _roomTextField.text;
     
 }

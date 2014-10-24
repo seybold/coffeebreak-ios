@@ -13,7 +13,7 @@
 @end
 
 @implementation BreakRoomViewController {
-    SRWebSocket* webSocket;
+    SRWebSocket* wSocket;
     NSString *checkUsers;
 }
 
@@ -41,8 +41,8 @@
 */
 
 - (void)connectWebSocket {
-    webSocket.delegate = nil;
-    webSocket = nil;
+    wSocket.delegate = nil;
+    wSocket = nil;
     
     NSString *urlString = @"ws://coffeebreak.ws:1880";
     SRWebSocket *newWebSocket = [[SRWebSocket alloc] initWithURL:[NSURL URLWithString:urlString]];
@@ -52,9 +52,9 @@
 }
 
 - (void)webSocketDidOpen:(SRWebSocket *)newWebSocket {
-    webSocket = newWebSocket;
+    wSocket = newWebSocket;
     NSString *login = [NSString stringWithFormat:@"{\"tag\":\"%@\",\"action\":\"#\"}", _roomName];
-    [webSocket send:login];
+    [wSocket send:login];
 }
 
 - (void)webSocket:(SRWebSocket *)webSocket didFailWithError:(NSError *)error {
@@ -68,7 +68,7 @@
 - (void)webSocket:(SRWebSocket *)webSocket didReceiveMessage:(id)message {
     NSData *jsonData = [message dataUsingEncoding:NSUTF8StringEncoding];
     NSError *e;
-    NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:jsonData options:nil error:&e];
+    NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:&e];
     NSString *action = [dict valueForKey:@"action"];
     
     if (action.length == 0) {
@@ -81,22 +81,23 @@
 }
 
 - (void)listUsers:(NSArray *)users {
-    //NSMutableString *userList = [[NSMutableString alloc]init];
-    NSMutableArray *indexPaths = [NSMutableArray array];
+    /*NSMutableArray *indexPaths = [NSMutableArray array];
     for (int i = 0; i < users.count; i++) {
         [indexPaths addObject:[NSIndexPath indexPathForRow:i inSection:0]];
     }
     _usersTable.dataSource = users;
     [_usersTable insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationFade];
-   /* for (NSMutableString *user in users) {
+     */
+    NSMutableString *userList = [[NSMutableString alloc]init];
+    for (NSMutableString *user in users) {
         [userList appendString:[NSString stringWithFormat:@"%@\n", user]];
     }
-    _userListView.text = userList;*/
+    _userListView.text = userList;
 }
 
 - (IBAction)sendMessage:(id)sender {
     NSString *breakMsg = [NSString stringWithFormat:@"{\"user\":\"%@\",\"action\":\"+\"}", _usernameField.text];
-    [webSocket send:breakMsg];
+    [wSocket send:breakMsg];
 }
 
 @end

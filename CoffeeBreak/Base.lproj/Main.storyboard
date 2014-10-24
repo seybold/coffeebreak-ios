@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="47R-1v-yCD">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="47R-1v-yCD">
                                 <rect key="frame" x="94" y="178" width="132" height="69"/>
                                 <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -38,29 +38,28 @@
                                     <segue destination="OLb-R8-yUP" kind="presentation" id="oWW-2V-XTH"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZNV-hX-7gS">
-                                <rect key="frame" x="73" y="104" width="192" height="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="tagField.tiff" translatesAutoresizingMaskIntoConstraints="NO" id="f43-8L-RLE">
+                                <rect key="frame" x="34" y="100" width="240" height="38"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZNV-hX-7gS">
+                                <rect key="frame" x="82" y="104" width="186" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="#" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TVC-tT-1Kp">
-                                <rect key="frame" x="55" y="106" width="21" height="26"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <color key="textColor" red="0.52468039772727271" green="0.52468039772727271" blue="0.52468039772727271" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ZNV-hX-7gS" firstAttribute="leading" secondItem="fqb-4S-SBc" secondAttribute="leadingMargin" constant="57" id="05I-bw-dYK"/>
                             <constraint firstItem="ZNV-hX-7gS" firstAttribute="top" secondItem="M03-mf-TFp" secondAttribute="bottom" constant="84" id="5tb-ZE-NCR"/>
-                            <constraint firstItem="ZNV-hX-7gS" firstAttribute="leading" secondItem="TVC-tT-1Kp" secondAttribute="trailing" constant="-3" id="839-Se-377"/>
+                            <constraint firstItem="f43-8L-RLE" firstAttribute="top" secondItem="M03-mf-TFp" secondAttribute="bottom" constant="80" id="6U3-al-7cH"/>
                             <constraint firstItem="47R-1v-yCD" firstAttribute="leading" secondItem="fqb-4S-SBc" secondAttribute="leadingMargin" constant="78" id="Bxg-YW-l7p"/>
-                            <constraint firstItem="TVC-tT-1Kp" firstAttribute="leading" secondItem="fqb-4S-SBc" secondAttribute="leadingMargin" constant="39" id="Slg-Yi-vw0"/>
+                            <constraint firstItem="ZNV-hX-7gS" firstAttribute="top" secondItem="M03-mf-TFp" secondAttribute="bottom" constant="84" id="FEg-8y-0qf"/>
+                            <constraint firstItem="f43-8L-RLE" firstAttribute="leading" secondItem="fqb-4S-SBc" secondAttribute="leadingMargin" constant="18" id="G8T-Wo-rwV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="f43-8L-RLE" secondAttribute="trailing" constant="30" id="U1R-e3-jDv"/>
+                            <constraint firstItem="47R-1v-yCD" firstAttribute="top" secondItem="f43-8L-RLE" secondAttribute="bottom" constant="40" id="aKV-aA-JQw"/>
+                            <constraint firstItem="ZNV-hX-7gS" firstAttribute="leading" secondItem="fqb-4S-SBc" secondAttribute="leadingMargin" constant="66" id="acm-fj-6Zf"/>
                             <constraint firstAttribute="trailingMargin" secondItem="47R-1v-yCD" secondAttribute="trailing" constant="78" id="cKa-nG-hWP"/>
                             <constraint firstItem="47R-1v-yCD" firstAttribute="top" secondItem="ZNV-hX-7gS" secondAttribute="bottom" constant="44" id="d0a-fT-24e"/>
-                            <constraint firstItem="TVC-tT-1Kp" firstAttribute="top" secondItem="M03-mf-TFp" secondAttribute="bottom" constant="86" id="nH1-2v-SIN"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ZNV-hX-7gS" secondAttribute="trailing" constant="39" id="ybi-5M-Llt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZNV-hX-7gS" secondAttribute="trailing" constant="36" id="okT-8N-2r8"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
@@ -112,10 +111,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="G5k-vc-Dc0">
-                                <rect key="frame" x="48" y="72" width="225" height="168"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -142,7 +137,6 @@
                     <connections>
                         <outlet property="userListView" destination="qeu-43-8c2" id="xqD-La-9mb"/>
                         <outlet property="usernameField" destination="tBI-tt-Uxq" id="2bN-un-v65"/>
-                        <outlet property="usersTable" destination="G5k-vc-Dc0" id="Y0h-ZP-kx4"/>
                     </connections>
                 </viewController>
             </objects>
@@ -168,4 +162,7 @@
             <point key="canvasLocation" x="202" y="346"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="tagField.tiff" width="872" height="118"/>
+    </resources>
 </document>
