@@ -23,6 +23,9 @@
     [self connectWebSocket];
     self.navigationItem.title = [NSString stringWithFormat:@"#%@", _roomName];
     checkUsers = [NSString stringWithFormat:@"{\"tag\":\"%@\",\"action\":\"/\"}", _roomName];
+        if ([UIApplication instancesRespondToSelector:@selector(registerUserNotificationSettings:)]){
+            [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeBadge|UIUserNotificationTypeSound categories:nil]];
+        }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -76,6 +79,15 @@
     } else if ([action isEqualToString:@"/"]) {
         [self listUsers:[dict valueForKey:@"users"]];
     } else if ([action isEqualToString:@"+"]) {
+        UILocalNotification *localNotif = [[UILocalNotification alloc] init];
+        if (localNotif) {
+            localNotif.alertBody = [NSString stringWithFormat:
+                                    NSLocalizedString(@"%@ wants to take a break.", nil), [dict valueForKey:@"user"]];
+            localNotif.alertAction = NSLocalizedString(@"Read Message", nil);
+            localNotif.soundName = @"alarmsound.caf";
+            localNotif.applicationIconBadgeNumber = 1;
+            [[UIApplication sharedApplication] presentLocalNotificationNow:localNotif];
+        }
         [webSocket send:checkUsers];
     }
 }

@@ -24,6 +24,8 @@
 		88BB7F7319F99BEF00502483 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88BB7F7219F99BEF00502483 /* Images.xcassets */; };
 		88BB7F7619F99BEF00502483 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88BB7F7419F99BEF00502483 /* LaunchScreen.xib */; };
 		88BB7F8219F99BEF00502483 /* CoffeeBreakTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 88BB7F8119F99BEF00502483 /* CoffeeBreakTests.m */; };
+		88DC6E8719FA541D00E83718 /* coffee16w180px.png in Resources */ = {isa = PBXBuildFile; fileRef = 88DC6E8619FA541D00E83718 /* coffee16w180px.png */; };
+		88DC6E8919FA543E00E83718 /* coffee16w120px.png in Resources */ = {isa = PBXBuildFile; fileRef = 88DC6E8819FA543E00E83718 /* coffee16w120px.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,8 @@
 		88BB7F7B19F99BEF00502483 /* CoffeeBreakTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoffeeBreakTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		88BB7F8019F99BEF00502483 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88BB7F8119F99BEF00502483 /* CoffeeBreakTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoffeeBreakTests.m; sourceTree = "<group>"; };
+		88DC6E8619FA541D00E83718 /* coffee16w180px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coffee16w180px.png; sourceTree = "<group>"; };
+		88DC6E8819FA543E00E83718 /* coffee16w120px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coffee16w120px.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +156,8 @@
 		88BB7F6219F99BEF00502483 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				88DC6E8619FA541D00E83718 /* coffee16w180px.png */,
+				88DC6E8819FA543E00E83718 /* coffee16w120px.png */,
 				88824FAD19FA3391000CD1EB /* coffee16w.png */,
 				88824FAB19FA2B27000CD1EB /* tagField.tiff */,
 				88BB7F6319F99BEF00502483 /* Info.plist */,
@@ -226,6 +232,11 @@
 				TargetAttributes = {
 					88BB7F5E19F99BEF00502483 = {
 						CreatedOnToolsVersion = 6.0.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+						};
 					};
 					88BB7F7A19F99BEF00502483 = {
 						CreatedOnToolsVersion = 6.0.1;
@@ -258,7 +269,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				88BB7F7119F99BEF00502483 /* Main.storyboard in Resources */,
+				88DC6E8919FA543E00E83718 /* coffee16w120px.png in Resources */,
 				88824FAE19FA3391000CD1EB /* coffee16w.png in Resources */,
+				88DC6E8719FA541D00E83718 /* coffee16w180px.png in Resources */,
 				88BB7F7619F99BEF00502483 /* LaunchScreen.xib in Resources */,
 				88824FAC19FA2B27000CD1EB /* tagField.tiff in Resources */,
 				88BB7F7319F99BEF00502483 /* Images.xcassets in Resources */,
