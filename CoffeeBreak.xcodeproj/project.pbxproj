@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		883C68AE1A07A31B004A6866 /* tag_field.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 883C68AC1A07A31B004A6866 /* tag_field.tiff */; };
+		883C68AF1A07A31B004A6866 /* name_field.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 883C68AD1A07A31B004A6866 /* name_field.tiff */; };
 		88824F9719F9A31F000CD1EB /* BreakRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88824F9619F9A31F000CD1EB /* BreakRoomViewController.m */; };
 		88824F9A19F9A34A000CD1EB /* LobbyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88824F9919F9A34A000CD1EB /* LobbyViewController.m */; };
 		88824F9F19F9A5C4000CD1EB /* SRWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 88824F9E19F9A5C4000CD1EB /* SRWebSocket.m */; };
@@ -14,7 +16,6 @@
 		88824FA319F9A68B000CD1EB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88824FA219F9A68B000CD1EB /* Security.framework */; };
 		88824FA519F9A691000CD1EB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88824FA419F9A691000CD1EB /* Foundation.framework */; };
 		88824FA719F9A69A000CD1EB /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 88824FA619F9A69A000CD1EB /* libicucore.dylib */; };
-		88824FAC19FA2B27000CD1EB /* tagField.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 88824FAB19FA2B27000CD1EB /* tagField.tiff */; };
 		88824FAE19FA3391000CD1EB /* coffee16w.png in Resources */ = {isa = PBXBuildFile; fileRef = 88824FAD19FA3391000CD1EB /* coffee16w.png */; };
 		88BB7F6519F99BEF00502483 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 88BB7F6419F99BEF00502483 /* main.m */; };
 		88BB7F6819F99BEF00502483 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 88BB7F6719F99BEF00502483 /* AppDelegate.m */; };
@@ -24,6 +25,7 @@
 		88BB7F7319F99BEF00502483 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88BB7F7219F99BEF00502483 /* Images.xcassets */; };
 		88BB7F7619F99BEF00502483 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88BB7F7419F99BEF00502483 /* LaunchScreen.xib */; };
 		88BB7F8219F99BEF00502483 /* CoffeeBreakTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 88BB7F8119F99BEF00502483 /* CoffeeBreakTests.m */; };
+		88DB994B1A07C72E00518A75 /* users.png in Resources */ = {isa = PBXBuildFile; fileRef = 88DB994A1A07C72E00518A75 /* users.png */; };
 		88DC6E8719FA541D00E83718 /* coffee16w180px.png in Resources */ = {isa = PBXBuildFile; fileRef = 88DC6E8619FA541D00E83718 /* coffee16w180px.png */; };
 		88DC6E8919FA543E00E83718 /* coffee16w120px.png in Resources */ = {isa = PBXBuildFile; fileRef = 88DC6E8819FA543E00E83718 /* coffee16w120px.png */; };
 /* End PBXBuildFile section */
@@ -39,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		883C68AC1A07A31B004A6866 /* tag_field.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = tag_field.tiff; sourceTree = "<group>"; };
+		883C68AD1A07A31B004A6866 /* name_field.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = name_field.tiff; sourceTree = "<group>"; };
 		88824F9519F9A31F000CD1EB /* BreakRoomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BreakRoomViewController.h; sourceTree = "<group>"; };
 		88824F9619F9A31F000CD1EB /* BreakRoomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BreakRoomViewController.m; sourceTree = "<group>"; };
 		88824F9819F9A34A000CD1EB /* LobbyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LobbyViewController.h; sourceTree = "<group>"; };
@@ -50,7 +54,6 @@
 		88824FA219F9A68B000CD1EB /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		88824FA419F9A691000CD1EB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		88824FA619F9A69A000CD1EB /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
-		88824FAB19FA2B27000CD1EB /* tagField.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = tagField.tiff; sourceTree = "<group>"; };
 		88824FAD19FA3391000CD1EB /* coffee16w.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coffee16w.png; sourceTree = "<group>"; };
 		88BB7F5F19F99BEF00502483 /* CoffeeBreak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeBreak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88BB7F6319F99BEF00502483 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -66,6 +69,7 @@
 		88BB7F7B19F99BEF00502483 /* CoffeeBreakTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoffeeBreakTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		88BB7F8019F99BEF00502483 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88BB7F8119F99BEF00502483 /* CoffeeBreakTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoffeeBreakTests.m; sourceTree = "<group>"; };
+		88DB994A1A07C72E00518A75 /* users.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = users.png; sourceTree = "<group>"; };
 		88DC6E8619FA541D00E83718 /* coffee16w180px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coffee16w180px.png; sourceTree = "<group>"; };
 		88DC6E8819FA543E00E83718 /* coffee16w120px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coffee16w120px.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -156,10 +160,12 @@
 		88BB7F6219F99BEF00502483 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				88DB994A1A07C72E00518A75 /* users.png */,
+				883C68AC1A07A31B004A6866 /* tag_field.tiff */,
+				883C68AD1A07A31B004A6866 /* name_field.tiff */,
 				88DC6E8619FA541D00E83718 /* coffee16w180px.png */,
 				88DC6E8819FA543E00E83718 /* coffee16w120px.png */,
 				88824FAD19FA3391000CD1EB /* coffee16w.png */,
-				88824FAB19FA2B27000CD1EB /* tagField.tiff */,
 				88BB7F6319F99BEF00502483 /* Info.plist */,
 				88BB7F6419F99BEF00502483 /* main.m */,
 			);
@@ -232,6 +238,7 @@
 				TargetAttributes = {
 					88BB7F5E19F99BEF00502483 = {
 						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = RB7RRJTM2G;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 0;
@@ -271,9 +278,11 @@
 				88BB7F7119F99BEF00502483 /* Main.storyboard in Resources */,
 				88DC6E8919FA543E00E83718 /* coffee16w120px.png in Resources */,
 				88824FAE19FA3391000CD1EB /* coffee16w.png in Resources */,
+				883C68AF1A07A31B004A6866 /* name_field.tiff in Resources */,
 				88DC6E8719FA541D00E83718 /* coffee16w180px.png in Resources */,
+				883C68AE1A07A31B004A6866 /* tag_field.tiff in Resources */,
+				88DB994B1A07C72E00518A75 /* users.png in Resources */,
 				88BB7F7619F99BEF00502483 /* LaunchScreen.xib in Resources */,
-				88824FAC19FA2B27000CD1EB /* tagField.tiff in Resources */,
 				88BB7F7319F99BEF00502483 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -420,9 +429,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = CoffeeBreak/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -430,9 +442,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = CoffeeBreak/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

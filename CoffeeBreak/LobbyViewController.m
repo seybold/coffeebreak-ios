@@ -21,6 +21,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
+    _nameTextField.text = [defaults objectForKey:@"name"];
+    _roomTextField.text = [defaults objectForKey:@"room"];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -38,6 +43,11 @@
     UINavigationController *navController = [segue destinationViewController];
     BreakRoomViewController *breakRoom = (BreakRoomViewController *)navController.visibleViewController;
     breakRoom.roomName = _roomTextField.text;
+    breakRoom.name = _nameTextField.text;
+    
+    NSUserDefaults *stringDefault = [NSUserDefaults standardUserDefaults];
+    [stringDefault setObject:_nameTextField.text forKey:@"name"];
+    [stringDefault setObject:_roomTextField.text forKey:@"room"];
     
 }
 

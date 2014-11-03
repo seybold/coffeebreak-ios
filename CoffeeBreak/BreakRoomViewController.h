@@ -10,10 +10,12 @@
 #import "SRWebSocket.h"
 
 @interface BreakRoomViewController : UIViewController <SRWebSocketDelegate>
-@property (strong, nonatomic) IBOutlet UITextField *usernameField;
-@property (strong, nonatomic) IBOutlet UITableView *usersTable;
 @property (strong, nonatomic) NSString *roomName;
+@property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) IBOutlet UITextView *userListView;
+@property (strong, nonatomic) IBOutlet UILabel *usersLabel;
 - (IBAction)sendMessage:(id)sender;
+@property (strong, nonatomic) IBOutlet UILabel *smokeLabel;
+@property (strong, nonatomic) IBOutlet UILabel *coffeeLabel;
 
 @end

@@ -10,6 +10,8 @@
 
 @interface LobbyViewController : UIViewController
 @property (strong, nonatomic) IBOutlet UITextField *roomTextField;
+@property (strong, nonatomic) IBOutlet UITextField *nameTextField;
+@property (strong, nonatomic) IBOutlet UIButton *goButton;
 
 -(IBAction)unwindToLobby:(UIStoryboardSegue*)segue;
 @end

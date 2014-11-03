@@ -21,12 +21,33 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self connectWebSocket];
-    self.navigationItem.title = [NSString stringWithFormat:@"#%@", _roomName];
+    self.navigationItem.title = [NSString stringWithFormat:@"#%@ as %@", _roomName, _name];
     checkUsers = [NSString stringWithFormat:@"{\"tag\":\"%@\",\"action\":\"/\"}", _roomName];
         if ([UIApplication instancesRespondToSelector:@selector(registerUserNotificationSettings:)]){
             [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeBadge|UIUserNotificationTypeSound categories:nil]];
         }
+    
+    [_userListView addObserver:self forKeyPath:@"contentSize" options:(NSKeyValueObservingOptionNew) context:NULL];
+
+    _userListView.editable = YES;
+    _userListView.textAlignment = NSTextAlignmentCenter;
+    _userListView.editable = NO;
+
 }
+
+-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+    UITextView *tv = object;
+    //Center vertical alignment
+    //CGFloat topCorrect = ([tv bounds].size.height - [tv contentSize].height * [tv zoomScale])/2.0;
+    //topCorrect = ( topCorrect < 0.0 ? 0.0 : topCorrect );
+    //tv.contentOffset = (CGPoint){.x = 0, .y = -topCorrect};
+    
+    //Bottom vertical alignment
+    CGFloat topCorrect = ([tv bounds].size.height - [tv contentSize].height);
+    topCorrect = (topCorrect <0.0 ? 0.0 : topCorrect);
+    tv.contentOffset = (CGPoint){.x = 0, .y = -topCorrect};
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -73,6 +94,11 @@
     NSError *e;
     NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:&e];
     NSString *action = [dict valueForKey:@"action"];
+    if([dict objectForKey:@"activeUsers"] != nil) {
+        NSInteger activeUsers = [[dict objectForKey:@"activeUsers"] integerValue];
+        _usersLabel.text = [NSString stringWithFormat:@"%ld", activeUsers];
+    }
+    
     
     if (action.length == 0) {
         [webSocket send:checkUsers];
@@ -85,21 +111,24 @@
                                     NSLocalizedString(@"%@ wants to take a break.", nil), [dict valueForKey:@"user"]];
             localNotif.alertAction = NSLocalizedString(@"Read Message", nil);
             localNotif.soundName = @"alarmsound.caf";
-            localNotif.applicationIconBadgeNumber = 1;
             [[UIApplication sharedApplication] presentLocalNotificationNow:localNotif];
         }
         [webSocket send:checkUsers];
     }
+    
 }
 
 - (void)listUsers:(NSArray *)users {
-    /*NSMutableArray *indexPaths = [NSMutableArray array];
-    for (int i = 0; i < users.count; i++) {
-        [indexPaths addObject:[NSIndexPath indexPathForRow:i inSection:0]];
+    
+    if(users.count >= 5) {
+        _smokeLabel.hidden = TRUE;
+        [_userListView setBackgroundColor:[UIColor blackColor]];
+        [_userListView setTextColor:[UIColor whiteColor]];
+    } else {
+        _smokeLabel.hidden = FALSE;
+        [_userListView setBackgroundColor:[UIColor whiteColor]];
+        [_userListView setTextColor:[UIColor blackColor]];
     }
-    _usersTable.dataSource = users;
-    [_usersTable insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationFade];
-     */
     NSMutableString *userList = [[NSMutableString alloc]init];
     for (NSMutableString *user in users) {
         [userList appendString:[NSString stringWithFormat:@"%@\n", user]];
@@ -108,8 +137,15 @@
 }
 
 - (IBAction)sendMessage:(id)sender {
-    NSString *breakMsg = [NSString stringWithFormat:@"{\"user\":\"%@\",\"action\":\"+\"}", _usernameField.text];
+    NSString *breakMsg = [NSString stringWithFormat:@"{\"user\":\"%@\",\"action\":\"+\"}", _name];
     [wSocket send:breakMsg];
+}
+
+- (void)dealloc {
+    [_userListView removeObserver:self forKeyPath:@"contentSize"];
+    [wSocket close];
+    wSocket.delegate = nil;
+    wSocket = nil;
 }
 
 @end
